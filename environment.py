@@ -423,9 +423,7 @@ def predict_max_score_3D(field, aero_cnn, number_of_moves, moves, debug_flag=Fal
     
     # Now select the most successful move
     X_data = np.stack(X_data, axis=0) 
-    print(X_data.shape)
     prediction = aero_cnn.predict(X_data)
-    print(prediction.shape)
     
     # If needed to debug, output prediction
     if (debug_flag):
